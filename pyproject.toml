@@ -1,0 +1,22 @@
+[project]
+name = "suns_z3"
+version = "1.0.0"
+description = "Zadanie 3 z predmetu SUNS"
+authors = [{ name = "Peter Muzslay" }]
+requires-python = ">=3.10"
+
+dependencies = [
+    "polars",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "jupyter",
+    "ipykernel",
+    "pyarrow",
+    "umap-learn",
+]
+
+[tool.ruff]
+exclude = ["suns_z3_merged.py"]
