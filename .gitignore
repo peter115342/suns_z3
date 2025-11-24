@@ -142,3 +142,4 @@ Desktop.ini
 dataset/
 context/
 .ruff_cache/
+checkpoints/

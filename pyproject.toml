@@ -3,20 +3,22 @@ name = "suns_z3"
 version = "1.0.0"
 description = "Zadanie 3 z predmetu SUNS"
 authors = [{ name = "Peter Muzslay" }]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
+# pytorch and related are installed from https://download.pytorch.org/whl/xpu
 dependencies = [
-    "polars",
-    "pandas",
-    "numpy",
-    "scikit-learn",
-    "matplotlib",
-    "seaborn",
-    "jupyter",
-    "ipykernel",
-    "pyarrow",
-    "umap-learn",
-]
+    "polars>=1.35.2",
+    "numpy>=2.3.5",
+    "scikit-learn>=1.7.2",
+    "matplotlib>=3.10.7",
+    "seaborn>=0.13.2",
+    "scipy>=1.15.2",
+    "jupyter>=1.1.1",
+    "ipykernel>=7.1.0",
+    "pyarrow>=22.0.0",
 
+    "pillow>=12.0.0",
+    "tqdm>=4.67.1",
+]
 [tool.ruff]
 exclude = ["suns_z3_merged.py"]
