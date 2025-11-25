@@ -15,6 +15,7 @@ class SolarDataset(Dataset):
         image_size: tuple = (224, 224),
         transform=None,
         normalize=True,
+        use_resized: bool = True,
     ):
         self.df = df
         self.data_dir = data_dir
@@ -22,6 +23,7 @@ class SolarDataset(Dataset):
         self.image_size = image_size
         self.transform = transform
         self.normalize = normalize
+        self.use_resized = use_resized
 
         self.image_mean = torch.tensor([0.485, 0.456, 0.406]).view(3, 1, 1)
         self.image_std = torch.tensor([0.229, 0.224, 0.225]).view(3, 1, 1)
@@ -32,11 +34,24 @@ class SolarDataset(Dataset):
     def __getitem__(self, idx):
         row = self.df.row(idx, named=True)
 
-        month_str = str(row["Month"]).zfill(2)
-        image_path = self.data_dir / month_str / "original" / row["PictureName"]
+        if (
+            self.use_resized
+            and "ResizedImagePath" in row
+            and row["ResizedImagePath"] is not None
+        ):
+            image_path = Path(row["ResizedImagePath"])
+        else:
+            month_str = str(row["Month"]).zfill(2)
+            image_path = self.data_dir / month_str / "original" / row["PictureName"]
 
         image = Image.open(image_path).convert("RGB")
-        image = image.resize(self.image_size, Image.BILINEAR)
+
+        if not (
+            self.use_resized
+            and "ResizedImagePath" in row
+            and row["ResizedImagePath"] is not None
+        ):
+            image = image.resize(self.image_size, Image.BILINEAR)
 
         image = torch.from_numpy(np.array(image)).permute(2, 0, 1).float() / 255.0
 
@@ -60,12 +75,14 @@ def create_data_loaders(
     image_size: tuple = (224, 224),
     num_workers: int = 0,
     normalize: bool = True,
+    use_resized: bool = True,
 ):
     train_dataset = SolarDataset(
         train_df,
         data_dir,
         image_size=image_size,
         normalize=normalize,
+        use_resized=use_resized,
     )
 
     val_dataset = SolarDataset(
@@ -73,6 +90,7 @@ def create_data_loaders(
         data_dir,
         image_size=image_size,
         normalize=normalize,
+        use_resized=use_resized,
     )
 
     test_dataset = SolarDataset(
@@ -80,6 +98,7 @@ def create_data_loaders(
         data_dir,
         image_size=image_size,
         normalize=normalize,
+        use_resized=use_resized,
     )
 
     train_loader = DataLoader(
