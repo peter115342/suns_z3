@@ -75,7 +75,7 @@ def visualize_conv_filters(model, layer_idx=0, max_filters=32, save_path=None):
     return fig
 
 
-def predict_custom_images(model, images_dir, device, image_size=(224, 224)):
+def predict_custom_images(model, images_dir, device, image_size=(128, 128)):
     """
     Predikuje slnečné žiarenie pre vlastné obrázky.
 
@@ -98,6 +98,12 @@ def predict_custom_images(model, images_dir, device, image_size=(224, 224)):
         for ext in image_extensions:
             image_files.extend(list(images_dir.glob(f"*{ext}")))
             image_files.extend(list(images_dir.glob(f"*{ext.upper()}")))
+
+    # Odstráň duplikáty podľa názvu súboru
+    unique_files = {}
+    for img_path in image_files:
+        unique_files[img_path.name] = img_path
+    image_files = list(unique_files.values())
 
     if len(image_files) == 0:
         print(f"Žiadne obrázky neboli nájdené v {images_dir}")
@@ -158,6 +164,12 @@ def visualize_custom_predictions(custom_results, save_path=None):
     if len(custom_results) == 0:
         print("Žiadne vlastné obrázky na vizualizáciu.")
         return None
+
+    # Odstráň duplikáty podľa názvu obrázka
+    unique_results = {}
+    for r in custom_results:
+        unique_results[r["filename"]] = r
+    custom_results = list(unique_results.values())
 
     num_images = len(custom_results)
     cols = min(3, num_images)

@@ -31,7 +31,6 @@ class IrradianceCNN(nn.Module):
                 layers.append(nn.BatchNorm2d(out_channels))
             layers.append(nn.ReLU(inplace=True))
             layers.append(nn.MaxPool2d(kernel_size=2, stride=2))
-            layers.append(nn.Dropout2d(p=dropout_rate * 0.5))
 
             self.conv_layers.append(nn.Sequential(*layers))
             in_channels = out_channels
@@ -92,4 +91,3 @@ def create_cnn_model(
     model = model.to(device)
 
     return model
-

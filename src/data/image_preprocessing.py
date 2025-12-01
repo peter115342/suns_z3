@@ -8,7 +8,7 @@ def resize_and_save_images(
     df: pl.DataFrame,
     data_dir: Path,
     output_dir: Path,
-    image_size: tuple = (224, 224),
+    image_size: tuple = (128, 128),
     verbose: bool = True,
 ):
     """

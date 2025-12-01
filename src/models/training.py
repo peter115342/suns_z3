@@ -181,9 +181,13 @@ def create_optimizer_and_criterion(
     model,
     learning_rate=0.001,
     weight_decay=1e-4,
-    optimizer_type="adam",
+    optimizer_type="adamw",
 ):
-    if optimizer_type.lower() == "adam":
+    if optimizer_type.lower() == "adamw":
+        optimizer = optim.AdamW(
+            model.parameters(), lr=learning_rate, weight_decay=weight_decay
+        )
+    elif optimizer_type.lower() == "adam":
         optimizer = optim.Adam(
             model.parameters(), lr=learning_rate, weight_decay=weight_decay
         )
@@ -199,17 +203,19 @@ def create_optimizer_and_criterion(
 
     criterion = nn.MSELoss()
 
-    if IPEX_AVAILABLE:
-        try:
-            device = next(model.parameters()).device
-            if str(device).startswith("xpu"):
-                model.train()
-                model, optimizer = ipex.optimize(
-                    model, optimizer=optimizer, dtype=torch.float32, level="O1"
-                )
-                print("Model and optimizer optimized with Intel Extension for PyTorch (O1)")
-        except Exception as e:
-            print(f"Could not optimize with IPEX: {e}")
+    # IPEX optimize() vypnuté - spôsobuje extrémne spomalenie trénovania
+    # Model stále beží na XPU, len bez dodatočnej optimalizácie
+    # if IPEX_AVAILABLE:
+    #     try:
+    #         device = next(model.parameters()).device
+    #         if str(device).startswith("xpu"):
+    #             model.train()
+    #             model, optimizer = ipex.optimize(
+    #                 model, optimizer=optimizer, dtype=torch.float32, level="O1"
+    #             )
+    #             print("Model optimized with IPEX")
+    #     except Exception as e:
+    #         print(f"Could not optimize with IPEX: {e}")
 
     return optimizer, criterion
 
@@ -230,7 +236,11 @@ def save_checkpoint(model, optimizer, epoch, loss, filepath):
 
 
 def load_checkpoint(model, optimizer, filepath, device):
-    checkpoint = torch.load(filepath, map_location=device)
+    filepath = Path(filepath)
+    if not filepath.exists():
+        raise FileNotFoundError(f"Checkpoint file not found: {filepath}")
+
+    checkpoint = torch.load(str(filepath), map_location=device)
     model.load_state_dict(checkpoint["model_state_dict"])
     if optimizer:
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
