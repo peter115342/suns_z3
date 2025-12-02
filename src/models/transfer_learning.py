@@ -8,6 +8,7 @@ from tqdm import tqdm
 
 try:
     import intel_extension_for_pytorch as ipex
+
     IPEX_AVAILABLE = True
 except (ImportError, OSError):
     IPEX_AVAILABLE = False
