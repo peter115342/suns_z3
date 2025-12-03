@@ -18,8 +18,6 @@ dependencies = [
     "pyarrow>=22.0.0",
     "pillow>=12.0.0",
     "tqdm>=4.67.1",
-    "torchviz>=0.0.3",
-    "graphviz>=0.21",
 ]
 [tool.ruff]
 exclude = ["suns_z3_merged.py"]

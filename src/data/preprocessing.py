@@ -20,17 +20,14 @@ def pair_images_with_metadata(
     Returns:
         Tuple of (features DataFrame, target Series)
     """
-    # Verify image existence
     from .loading import verify_image_existence
 
     df = verify_image_existence(df, data_dir)
 
-    # Filter only rows where images exist
     df_valid = df.filter(pl.col("ImageExists"))
 
     print(f"Valid image-metadata pairs: {len(df_valid)} / {len(df)}")
 
-    # Separate features and target
     X = df_valid.drop(target_column)
     y = df_valid.select(target_column)
 
@@ -93,7 +90,6 @@ def split_data(
         f"  Test:  {len(splits['test'])} ({len(splits['test']) / len(df) * 100:.1f}%)"
     )
 
-    # Verify target distribution
     print(f"\nTarget ({target_column}) statistics:")
     for split_name, split_df in splits.items():
         mean_val = split_df[target_column].mean()

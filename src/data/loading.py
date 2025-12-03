@@ -1,7 +1,7 @@
 """Data loading utilities using Polars."""
 
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import List
 
 import polars as pl
 from PIL import Image
@@ -23,15 +23,12 @@ def load_solar_data(month_folder: Path) -> pl.DataFrame:
     if not csv_path.exists():
         raise FileNotFoundError(f"CSV file not found: {csv_path}")
 
-    # Load data with Polars
     df = pl.read_csv(csv_path)
 
-    # Parse DateTime column
     df = df.with_columns(
         [pl.col("DateTime").str.split("#").list.get(0).alias("DateTime_clean")]
     )
 
-    # Add month identifier
     month_name = month_folder.name
     df = df.with_columns([pl.lit(month_name).alias("Month")])
 
@@ -65,7 +62,6 @@ def load_all_months(
     if not dfs:
         raise ValueError("No data loaded. Check data directory.")
 
-    # Concatenate all DataFrames
     combined_df = pl.concat(dfs)
 
     print(f"\nTotal records loaded: {len(combined_df)}")
@@ -100,7 +96,6 @@ def get_image_path(picture_name: str, data_dir: Path, month: str) -> Path:
     Returns:
         Path to image file
     """
-    # Images are in original/ subfolder
     image_path = data_dir / month / "original" / picture_name
     return image_path
 

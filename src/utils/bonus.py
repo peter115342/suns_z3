@@ -99,7 +99,6 @@ def predict_custom_images(model, images_dir, device, image_size=(128, 128)):
             image_files.extend(list(images_dir.glob(f"*{ext}")))
             image_files.extend(list(images_dir.glob(f"*{ext.upper()}")))
 
-    # Odstráň duplikáty podľa názvu súboru
     unique_files = {}
     for img_path in image_files:
         unique_files[img_path.name] = img_path
@@ -165,7 +164,6 @@ def visualize_custom_predictions(custom_results, save_path=None):
         print("Žiadne vlastné obrázky na vizualizáciu.")
         return None
 
-    # Odstráň duplikáty podľa názvu obrázka
     unique_results = {}
     for r in custom_results:
         unique_results[r["filename"]] = r
