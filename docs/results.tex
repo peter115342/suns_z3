@@ -88,7 +88,7 @@ Dataset obsahuje dáta zo 4 mesiacov roku 2018:
 
 \clearpage
 
-\section{Časť 1: Exploračná dátová analýza}
+\section{Exploračná dátová analýza}
 
 \subsection{Načítanie a~analýza dát}
 
@@ -116,7 +116,7 @@ Smerodajná odchýlka & 282.50 W/m² \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../figures/eda_target_distribution.png}
+    \includegraphics[width=1.1\textwidth]{../figures/eda_target_distribution.png}
     \caption{Distribúcia cieľovej premennej Irradiance}
     \label{fig:target_distribution}
 \end{figure}
@@ -134,7 +134,7 @@ Smerodajná odchýlka & 282.50 W/m² \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/eda_monthly_distribution.png}
+    \includegraphics[width=1.1\textwidth]{../figures/eda_monthly_distribution.png}
     \caption{Distribúcia slnečného žiarenia podľa mesiacov}
     \label{fig:monthly_distribution}
 \end{figure}
@@ -154,7 +154,7 @@ Smerodajná odchýlka & 282.50 W/m² \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/eda_sample_images.png}
+    \includegraphics[width=1.1\textwidth]{../figures/eda_sample_images.png}
     \caption{Náhodné vzorky obrázkov oblohy s~hodnotami Irradiance}
     \label{fig:sample_images}
 \end{figure}
@@ -257,7 +257,7 @@ Testovacia & 902 & 15.0 \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/eda_split_distributions.png}
+    \includegraphics[width=1.1\textwidth]{../figures/eda_split_distributions.png}
     \caption{Distribúcia Irradiance v~jednotlivých splitoch}
     \label{fig:split_distributions}
 \end{figure}
@@ -266,7 +266,7 @@ Testovacia & 902 & 15.0 \\
 
 \clearpage
 
-\section{Časť 2: Konvolučné neurónové siete (CNN)}
+\section{Konvolučné neurónové siete (CNN)}
 
 \subsection{Architektúra CNN}
 
@@ -426,7 +426,7 @@ Model bol testovaný na 5 vlastných fotografiách oblohy z~Bratislavy:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.05\textwidth]{../figures/custom_images_predictions_config_5.png}
+    \includegraphics[width=1.1\textwidth]{../figures/custom_images_predictions_config_5.png}
     \caption{Predikcie na vlastných obrázkoch oblohy}
     \label{fig:custom_predictions}
 \end{figure}
@@ -474,16 +474,16 @@ Predikcia o~15 minút & 0.5901 & 180.40 \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.05\textwidth]{../figures/bonus_prediction_15min.png}
+    \includegraphics[width=1.1\textwidth]{../figures/bonus_prediction_15min.png}
     \caption{Výsledky predikcie žiarenia o~15 minút}
     \label{fig:prediction_15min}
 \end{figure}
 
-\textbf{Záver:} Predikcia budúceho žiarenia je výrazne ťažšia úloha kvôli dynamickým zmenám oblačnosti.
+\textbf{Zistenie:} Predikcia budúceho žiarenia je výrazne ťažšia úloha kvôli dynamickým zmenám oblačnosti.
 
 \clearpage
 
-\section{Časť 3: Transfer Learning a~zhlukovanie}
+\section{Transfer Learning a~zhlukovanie}
 
 \subsection{Extrakcia príznakov pomocou MobileNetV2}
 
@@ -530,7 +530,7 @@ Použili sme Elbow Method a~Silhouette Analysis:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/clusters_2d.png}
+    \includegraphics[width=1.1\textwidth]{../figures/clusters_2d.png}
     \caption{2D vizualizácia zhlukov pomocou t-SNE}
     \label{fig:clusters_2d}
 \end{figure}
@@ -539,7 +539,7 @@ Použili sme Elbow Method a~Silhouette Analysis:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/average_cluster_images.png}
+    \includegraphics[width=1.1\textwidth]{../figures/average_cluster_images.png}
     \caption{Priemerné obrázky pre jednotlivé zhluky}
     \label{fig:average_cluster_images}
 \end{figure}
@@ -550,7 +550,7 @@ Použili sme Elbow Method a~Silhouette Analysis:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/cluster_irradiance_distribution.png}
+    \includegraphics[width=1.1\textwidth]{../figures/cluster_irradiance_distribution.png}
     \caption{Distribúcia slnečného žiarenia v~jednotlivých zhlukoch}
     \label{fig:cluster_distribution}
 \end{figure}
@@ -627,7 +627,7 @@ Transfer Learning (Stacking) & 0.9601 & 56.73 & 29.15 \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/transfer_learning_residuals.png}
+    \includegraphics[width=1.1\textwidth]{../figures/transfer_learning_residuals.png}
     \caption{Reziduálna analýza Transfer Learning modelu}
     \label{fig:tl_residuals}
 \end{figure}
@@ -636,7 +636,7 @@ Transfer Learning (Stacking) & 0.9601 & 56.73 & 29.15 \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/transfer_learning_predictions.png}
+    \includegraphics[width=1.1\textwidth]{../figures/transfer_learning_predictions.png}
     \caption{Porovnanie predikcií Transfer Learning modelu}
     \label{fig:tl_predictions}
 \end{figure}
@@ -645,7 +645,7 @@ Transfer Learning (Stacking) & 0.9601 & 56.73 & 29.15 \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/worst_predictions.png}
+    \includegraphics[width=1.1\textwidth]{../figures/worst_predictions.png}
     \caption{Top 10 najhorších predikcií modelu}
     \label{fig:worst_predictions}
 \end{figure}
@@ -679,7 +679,7 @@ Tabuľkové príznaky & 0.7722 & 135.59 & 92.08 \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/bonus_fusion_comparison.png}
+    \includegraphics[width=1.1\textwidth]{../figures/bonus_fusion_comparison.png}
     \caption{Porovnanie modelov: obrazové vs. tabuľkové vs. fúzia}
     \label{fig:fusion_comparison}
 \end{figure}
@@ -688,19 +688,19 @@ Tabuľkové príznaky & 0.7722 & 135.59 & 92.08 \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{../figures/bonus_fusion_metrics.png}
+    \includegraphics[width=1.1\textwidth]{../figures/bonus_fusion_metrics.png}
     \caption{Porovnanie metrík R² a~RMSE}
     \label{fig:fusion_metrics}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{../figures/bonus_fusion_feature_importance.png}
+    \includegraphics[width=1.1\textwidth]{../figures/bonus_fusion_feature_importance.png}
     \caption{Dôležitosť príznakov vo fúznom modeli}
     \label{fig:feature_importance}
 \end{figure}
 
-\textbf{Záver:} Fúzia obrazových a~tabuľkových príznakov prináša mierne zlepšenie oproti samotným obrazovým príznakom.
+\textbf{Zistenie:} Fúzia obrazových a~tabuľkových príznakov prináša mierne zlepšenie oproti samotným obrazovým príznakom.
 
 \clearpage
 
@@ -756,7 +756,9 @@ Fúzia (bonus) & 0.9574 & 58.64 & Obrazové + tabuľkové \\
 \section*{Použitie nástrojov umelej inteligencie}
 
 Pri vypracovaní zadania som využil nasledujúce AI nástroje ako podporné prostriedky:
-
+\begin{itemize}
+    \item \textbf{Google Gemini 3 Pro (2025):} Využitý na odborné konzultácie a na pomoc so štylistikou a formuláciou odborného textu.
+\end{itemize}
 \begin{itemize}
     \item \textbf{Claude Opus 4.5 (2025):} Konzultácie pri návrhu architektúry CNN, brainstorming prístupov k~transfer learning a~diskusia o~vhodných metódach zhlukovania.
 \end{itemize}

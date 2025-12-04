@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Úvod}{4}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Použité technológie}{4}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Dataset}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Časť 1: Exploračná dátová analýza}{5}{section.2}%
+\contentsline {section}{\numberline {2}Exploračná dátová analýza}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Načítanie a~analýza dát}{5}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Štatistiky cieľovej premennej Irradiance}{5}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Vizualizácia distribúcie Irradiance}{5}{subsubsection.2.1.2}%
@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Top 10 korelácií s~Irradiance}{10}{subsubsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.5}Detailná analýza top features}{10}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Rozdelenie dát}{11}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Časť 2: Konvolučné neurónové siete (CNN)}{12}{section.3}%
+\contentsline {section}{\numberline {3}Konvolučné neurónové siete (CNN)}{12}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Architektúra CNN}{12}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Konfigurácie hyperparametrov}{12}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Výsledky trénovania CNN}{13}{subsection.3.3}%
@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {3.7}Vizualizácia konvolučných filtrov}{17}{subsection.3.7}%
 \contentsline {subsection}{\numberline {3.8}Bonus: Testovanie na vlastných obrázkoch}{19}{subsection.3.8}%
 \contentsline {subsection}{\numberline {3.9}Bonus: Predikcia žiarenia o~15 minút}{20}{subsection.3.9}%
-\contentsline {section}{\numberline {4}Časť 3: Transfer Learning a~zhlukovanie}{21}{section.4}%
+\contentsline {section}{\numberline {4}Transfer Learning a~zhlukovanie}{21}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Extrakcia príznakov pomocou MobileNetV2}{21}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Redukcia dimenzie pomocou PCA}{21}{subsubsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.2}Zhlukovanie pomocou K-Means}{21}{subsection.4.2}%

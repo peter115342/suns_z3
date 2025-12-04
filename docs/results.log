@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.13)  3 DEC 2025 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.13)  4 DEC 2025 19:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -542,7 +542,12 @@ Package caption Info: End \AtBeginDocument code.
 File: ../figures/eda_target_distribution.png Graphic file (type png)
 <use ../figures/eda_target_distribution.png>
 Package pdftex.def Info: ../figures/eda_target_distribution.png  used on input line 119.
-(pdftex.def)             Requested size: 409.71692pt x 143.78319pt.
+(pdftex.def)             Requested size: 500.77129pt x 175.74278pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 119--120
+ [][] 
+ []
+
 
 
 [5
@@ -552,7 +557,12 @@ Package pdftex.def Info: ../figures/eda_target_distribution.png  used on input l
 File: ../figures/eda_monthly_distribution.png Graphic file (type png)
 <use ../figures/eda_monthly_distribution.png>
 Package pdftex.def Info: ../figures/eda_monthly_distribution.png  used on input line 137.
-(pdftex.def)             Requested size: 432.48051pt x 213.45357pt.
+(pdftex.def)             Requested size: 500.77129pt x 247.15948pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 137--138
+ [][] 
+ []
+
 
 
 [6
@@ -562,7 +572,12 @@ Package pdftex.def Info: ../figures/eda_monthly_distribution.png  used on input 
 File: ../figures/eda_sample_images.png Graphic file (type png)
 <use ../figures/eda_sample_images.png>
 Package pdftex.def Info: ../figures/eda_sample_images.png  used on input line 157.
-(pdftex.def)             Requested size: 432.48051pt x 295.38605pt.
+(pdftex.def)             Requested size: 500.77129pt x 342.02652pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 157--158
+ [][] 
+ []
+
 <../figures/eda_low_irradiance_samples.png, id=279, 1057.551pt x 369.5406pt>
 File: ../figures/eda_low_irradiance_samples.png Graphic file (type png)
 <use ../figures/eda_low_irradiance_samples.png>
@@ -612,7 +627,12 @@ Overfull \hbox (54.62706pt too wide) in paragraph at lines 225--226
 File: ../figures/eda_split_distributions.png Graphic file (type png)
 <use ../figures/eda_split_distributions.png>
 Package pdftex.def Info: ../figures/eda_split_distributions.png  used on input line 260.
-(pdftex.def)             Requested size: 432.48051pt x 117.83182pt.
+(pdftex.def)             Requested size: 500.77129pt x 136.43684pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 260--261
+ [][] 
+ []
+
 
 
 [11
@@ -704,9 +724,9 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 416--417
 File: ../figures/custom_images_predictions_config_5.png Graphic file (type png)
 <use ../figures/custom_images_predictions_config_5.png>
 Package pdftex.def Info: ../figures/custom_images_predictions_config_5.png  used on input line 429.
-(pdftex.def)             Requested size: 478.00769pt x 334.51782pt.
+(pdftex.def)             Requested size: 500.77129pt x 350.44402pt.
 
-Overfull \hbox (22.76358pt too wide) in paragraph at lines 429--430
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 429--430
  [][] 
  []
 
@@ -719,9 +739,9 @@ Overfull \hbox (22.76358pt too wide) in paragraph at lines 429--430
 File: ../figures/bonus_prediction_15min.png Graphic file (type png)
 <use ../figures/bonus_prediction_15min.png>
 Package pdftex.def Info: ../figures/bonus_prediction_15min.png  used on input line 477.
-(pdftex.def)             Requested size: 478.00769pt x 155.77034pt.
+(pdftex.def)             Requested size: 500.77129pt x 163.18823pt.
 
-Overfull \hbox (22.76358pt too wide) in paragraph at lines 477--478
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 477--478
  [][] 
  []
 
@@ -738,12 +758,22 @@ Overfull \hbox (22.76358pt too wide) in paragraph at lines 477--478
 File: ../figures/clusters_2d.png Graphic file (type png)
 <use ../figures/clusters_2d.png>
 Package pdftex.def Info: ../figures/clusters_2d.png  used on input line 533.
-(pdftex.def)             Requested size: 432.48051pt x 160.96835pt.
+(pdftex.def)             Requested size: 500.77129pt x 186.38339pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 533--534
+ [][] 
+ []
+
 <../figures/average_cluster_images.png, id=394, 1142.3478pt x 573.342pt>
 File: ../figures/average_cluster_images.png Graphic file (type png)
 <use ../figures/average_cluster_images.png>
 Package pdftex.def Info: ../figures/average_cluster_images.png  used on input line 542.
-(pdftex.def)             Requested size: 432.48051pt x 217.05861pt.
+(pdftex.def)             Requested size: 500.77129pt x 251.33516pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 542--543
+ [][] 
+ []
+
 
 
 [22
@@ -753,7 +783,12 @@ Package pdftex.def Info: ../figures/average_cluster_images.png  used on input li
 File: ../figures/cluster_irradiance_distribution.png Graphic file (type png)
 <use ../figures/cluster_irradiance_distribution.png>
 Package pdftex.def Info: ../figures/cluster_irradiance_distribution.png  used on input line 553.
-(pdftex.def)             Requested size: 432.48051pt x 132.6105pt.
+(pdftex.def)             Requested size: 500.77129pt x 153.54788pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 553--554
+ [][] 
+ []
+
 
 
 [23
@@ -767,7 +802,12 @@ Package pdftex.def Info: ../figures/cluster_irradiance_distribution.png  used on
 File: ../figures/transfer_learning_residuals.png Graphic file (type png)
 <use ../figures/transfer_learning_residuals.png>
 Package pdftex.def Info: ../figures/transfer_learning_residuals.png  used on input line 630.
-(pdftex.def)             Requested size: 432.48051pt x 308.34511pt.
+(pdftex.def)             Requested size: 500.77129pt x 357.03577pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 630--631
+ [][] 
+ []
+
 
 
 [25
@@ -777,12 +817,22 @@ Package pdftex.def Info: ../figures/transfer_learning_residuals.png  used on inp
 File: ../figures/transfer_learning_predictions.png Graphic file (type png)
 <use ../figures/transfer_learning_predictions.png>
 Package pdftex.def Info: ../figures/transfer_learning_predictions.png  used on input line 639.
-(pdftex.def)             Requested size: 432.48051pt x 183.05457pt.
+(pdftex.def)             Requested size: 500.77129pt x 211.95792pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 639--640
+ [][] 
+ []
+
 <../figures/worst_predictions.png, id=425, 1391.4384pt x 569.9694pt>
 File: ../figures/worst_predictions.png Graphic file (type png)
 <use ../figures/worst_predictions.png>
 Package pdftex.def Info: ../figures/worst_predictions.png  used on input line 648.
-(pdftex.def)             Requested size: 432.48051pt x 177.15833pt.
+(pdftex.def)             Requested size: 500.77129pt x 205.12794pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 648--649
+ [][] 
+ []
+
 
 
 [26
@@ -792,7 +842,12 @@ Package pdftex.def Info: ../figures/worst_predictions.png  used on input line 64
 File: ../figures/bonus_fusion_comparison.png Graphic file (type png)
 <use ../figures/bonus_fusion_comparison.png>
 Package pdftex.def Info: ../figures/bonus_fusion_comparison.png  used on input line 682.
-(pdftex.def)             Requested size: 432.48051pt x 286.12814pt.
+(pdftex.def)             Requested size: 500.77129pt x 331.30798pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 682--683
+ [][] 
+ []
+
 
 
 [27
@@ -802,12 +857,22 @@ Package pdftex.def Info: ../figures/bonus_fusion_comparison.png  used on input l
 File: ../figures/bonus_fusion_metrics.png Graphic file (type png)
 <use ../figures/bonus_fusion_metrics.png>
 Package pdftex.def Info: ../figures/bonus_fusion_metrics.png  used on input line 691.
-(pdftex.def)             Requested size: 386.96027pt x 158.77878pt.
+(pdftex.def)             Requested size: 500.77129pt x 205.47874pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 691--692
+ [][] 
+ []
+
 <../figures/bonus_fusion_feature_importance.png, id=443, 859.5312pt x 567.5604pt>
 File: ../figures/bonus_fusion_feature_importance.png Graphic file (type png)
 <use ../figures/bonus_fusion_feature_importance.png>
 Package pdftex.def Info: ../figures/bonus_fusion_feature_importance.png  used on input line 698.
-(pdftex.def)             Requested size: 432.48051pt x 285.58083pt.
+(pdftex.def)             Requested size: 500.77129pt x 330.67482pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 698--699
+ [][] 
+ []
+
 
 
 [28
@@ -817,7 +882,7 @@ Package pdftex.def Info: ../figures/bonus_fusion_feature_importance.png  used on
 [29
 
 ]
-Overfull \hbox (44.31601pt too wide) in paragraph at lines 773--775
+Overfull \hbox (44.31601pt too wide) in paragraph at lines 775--777
 []$\T1/cmtt/m/n/12 https : / / scikit -[] learn . org / stable / modules / ensemble . html#stacked -[] generalization$[] 
  []
 
@@ -831,7 +896,7 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
 Package rerunfilecheck Info: File `results.out' has not changed.
-(rerunfilecheck)             Checksum: 2AC0307163515AD9FB4E2C03FC363BD4;9289.
+(rerunfilecheck)             Checksum: 9C4DACD3C91C734C4C2940BCEBA783FB;9133.
  ) 
 Here is how much of TeX's memory you used:
  16938 strings out of 467748
@@ -842,7 +907,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  94i,8n,93p,361b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on results.pdf (30 pages, 14456975 bytes).
+Output written on results.pdf (30 pages, 14456091 bytes).
 PDF statistics:
  559 PDF objects out of 1000 (max. 8388607)
  451 compressed objects within 5 object streams
